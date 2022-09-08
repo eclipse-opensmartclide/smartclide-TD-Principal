@@ -33,25 +33,25 @@ public class AnalysisController {
 	@Autowired
 	private EndpointAnalysisService endpointAnalysisService;
 
-	@CrossOrigin(origins = "*")
+	//@CrossOrigin(origins = "*")
 	@GetMapping(path="{projectKey}/measures")
 	public Metric[] getMeasures(@PathVariable(value = "projectKey") String projectKey) {
 		return analysisService.getMeasures(projectKey);
 	}
 
-	@CrossOrigin(origins = "*")
+	//@CrossOrigin(origins = "*")
 	@GetMapping(path="{projectKey}/issues")
 	public List<Issue> getIssues(@PathVariable(value = "projectKey") String projectKey) {
 		return analysisService.getIssues(projectKey);
 	}
 
-	@CrossOrigin(origins = "*")
+	//@CrossOrigin(origins = "*")
 	@PostMapping(path="endpoints")
 	public List<Report> getEndpointMetricsPrivateManual(@RequestBody RequestBodyEndpointsManual requestBodyEndpointsManual) {
 		return endpointAnalysisService.getEndpointMetricsPrivateManual(requestBodyEndpointsManual);
 	}
 
-	@CrossOrigin(origins = "*")
+	//@CrossOrigin(origins = "*")
 	@PostMapping(path="endpoints/auto")
 	public List<Report> getEndpointMetricsPrivateAuto(@RequestBody RequestBodyEndpoints requestBodyEndpoints) {
 		return endpointAnalysisService.getEndpointMetricsPrivateAuto(requestBodyEndpoints);
@@ -63,7 +63,7 @@ public class AnalysisController {
 //		return endpointAnalysisService.getEnpointMetricsLocal(requestBodyEndpoints);
 //	}
 
-	@CrossOrigin(origins = "*")
+	//@CrossOrigin(origins = "*")
 	@PostMapping
 	public String makeNewAnalysis(@RequestBody RequestBodyAnalysis requestBodyAnalysis) {
 		String report = analysisService.startNewAnalysis(requestBodyAnalysis);
