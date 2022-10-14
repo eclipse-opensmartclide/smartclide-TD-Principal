@@ -33,7 +33,7 @@ docker build -t smartclide-td-principal-backend:latest .
 
 ## How to run TD Principal
 
-All the images of this component can be found [here](https://github.com/eclipse-researchlabs/smartclide-TD-Principal/pkgs/container/smartclide%2Ftdprincipal).
+All the images of this component can be found [here](https://github.com/eclipse-opensmartclide/smartclide-TD-Principal/pkgs/container/smartclide%2Ftdprincipal).
 
 You can run the backend service with the following command:
 
@@ -45,7 +45,7 @@ docker run -p 8555:8555 smartclide-td-principal-backend:latest
 
 **application.properties**
 
-The main properties of this backend service can be found [here](https://github.com/eclipse-researchlabs/smartclide-TD-Principal/blob/main/src/main/resources/application.properties), and are the following:
+The main properties of this backend service can be found [here](https://github.com/eclipse-opensmartclide/smartclide-TD-Principal/blob/main/src/main/resources/application.properties), and are the following:
 - server.port=8555, In order for the service to start in the 8555 port
 - gr.nikos.smartclide.sonarqube.url=http://localhost:9000, In order to get the SonarQube instance and the in case this is not configured in the beginning of the service it's going to be the localhost.
 
