@@ -1,4 +1,4 @@
-FROM  adoptopenjdk:11-jre-hotspot
+FROM  adoptopenjdk:16-jre-hotspot
 RUN apt-get update && apt-get install -y git
 ADD sonar-scanner-4.6.2.2472-linux sonar-scanner-4.6.2.2472-linux
 RUN chmod a+x /sonar-scanner-4.6.2.2472-linux/bin/sonar-scanner
